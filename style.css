@@ -1,0 +1,276 @@
+/* Amanda Damayanti_202432027 */
+/* =====================================================
+   Lab-Ventory | Clean Theme
+   Nuansa clean: putih, abu-abu lembut, aksen biru-teal
+   ===================================================== */
+
+:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text-main: #1e2939;
+    --text-muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-teal: #0d9488;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --radius: 14px;
+    --shadow: 0 2px 10px rgba(30, 41, 57, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 40px;
+}
+
+.navbar .brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .brand span.sub {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-left: 6px;
+    border-left: 1px solid var(--border);
+    padding-left: 10px;
+}
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.btn:hover { background: var(--primary-hover); }
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-outline:hover { background: #eef4ff; }
+.btn-danger { background: var(--danger); }
+.btn-danger:hover { background: #b91c1c; }
+.btn-success { background: var(--success); }
+.btn-success:hover { background: #15803d; }
+.btn-sm { padding: 6px 12px; font-size: 13px; border-radius: 8px; }
+
+/* ---------- Hero (index.php) ---------- */
+.hero {
+    text-align: center;
+    padding: 90px 20px 60px;
+}
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.hero h1 .accent { color: var(--primary); }
+.hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 28px;
+    font-size: 15px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    text-align: center;
+}
+.feature-card .icon { font-size: 26px; margin-bottom: 10px; }
+.feature-card h3 { margin: 8px 0; font-size: 16px; }
+.feature-card p { color: var(--text-muted); font-size: 13px; }
+
+.footer-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+}
+
+/* ---------- Login ---------- */
+.login-wrapper {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    width: 360px;
+    text-align: center;
+}
+.login-card h2 {
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+.login-card p.subtitle {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+.form-group { text-align: left; margin-bottom: 16px; }
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    font-size: 14px;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+}
+.login-card .btn { width: 100%; margin-top: 6px; }
+.back-link {
+    display: block;
+    margin-top: 18px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+.back-link:hover { color: var(--primary); }
+
+/* ---------- Dashboard layout ---------- */
+.dashboard {
+    padding: 30px 40px;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    margin-bottom: 20px;
+}
+.card h3 {
+    margin-top: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+thead th {
+    text-align: left;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 6px;
+}
+tbody td {
+    padding: 10px 6px;
+    border-bottom: 1px solid var(--border);
+}
+tbody tr:last-child td { border-bottom: none; }
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-blue { background: #e0e9ff; color: var(--primary); }
+.badge-teal { background: #ccfbf1; color: var(--accent-teal); }
+.badge-pending { background: #fef3c7; color: var(--warning); }
+.badge-approved { background: #dcfce7; color: var(--success); }
+.badge-ditolak { background: #fee2e2; color: var(--danger); }
+.badge-dikembalikan { background: #dbeafe; color: var(--primary); }
+
+.icon-btn {
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    background: #fff5f5;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.icon-btn:hover { background: var(--danger); color: #fff; }
+
+.empty-note {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 900px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .feature-grid { grid-template-columns: 1fr; }
+}
